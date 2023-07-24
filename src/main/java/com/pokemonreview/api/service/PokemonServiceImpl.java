@@ -79,8 +79,8 @@ public class PokemonServiceImpl implements PokemonService {
         pokemon.setName(pokemonDto.getName());
         pokemon.setType(pokemonDto.getType());
 
-        Pokemon updatedPokemon = pokemonRepository.save(pokemon);
-        return mapToDto(updatedPokemon);
+        //Pokemon updatedPokemon = pokemonRepository.save(pokemon);
+        return mapToDto(pokemon);
     }
 
     @Override

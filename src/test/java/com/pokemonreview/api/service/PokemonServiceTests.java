@@ -28,8 +28,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.mockito.Mockito.doNothing;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 public class PokemonServiceTests {
@@ -125,7 +124,7 @@ public class PokemonServiceTests {
 
         when(pokemonRepository.findById(pokemonId))
                 .thenReturn(Optional.ofNullable(pokemon));
-        when(pokemonRepository.save(pokemon))
+        lenient().when(pokemonRepository.save(pokemon))
                 .thenReturn(pokemon);
 
         PokemonDto updateReturn =

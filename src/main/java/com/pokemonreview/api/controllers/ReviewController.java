@@ -1,4 +1,4 @@
-package com.pokemonreview.api.controller;
+package com.pokemonreview.api.controllers;
 
 import com.pokemonreview.api.dto.ReviewDto;
 import com.pokemonreview.api.service.ReviewService;

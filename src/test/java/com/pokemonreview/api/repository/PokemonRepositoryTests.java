@@ -66,6 +66,7 @@ public class PokemonRepositoryTests {
                 .get();
 
         Assertions.assertThat(savedPokemon).isNotNull();
+        Assertions.assertThat(savedPokemon.getName()).isEqualTo("pikachu");
     }
 
     @Test
